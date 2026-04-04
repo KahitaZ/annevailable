@@ -6,7 +6,7 @@
   <title>annevailable</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after {
       box-sizing: border-box;
@@ -41,7 +41,6 @@
 
     .logo {
       width: min(340px, 80vw);
-      cursor: default;
     }
 
     .logo svg {
@@ -63,7 +62,6 @@
       align-items: center;
       gap: 0.6rem;
       color: var(--coral);
-      text-decoration: none;
       font-size: clamp(0.75rem, 3vw, 0.9rem);
       letter-spacing: 0.12em;
       opacity: 0.8;
@@ -84,31 +82,6 @@
       width: 17px;
       height: 17px;
       flex-shrink: 0;
-    }
-
-    #bg-canvas {
-      position: fixed;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-      pointer-events: none;
-    }
-
-    .page-content {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2.5rem;
-      pointer-events: none;
-    }
-
-    .page-content a,
-    .page-content button,
-    .page-content .logo {
-      pointer-events: all;
     }
 
     #ig-popup {
@@ -167,17 +140,14 @@
 </head>
 <body>
 
-  <canvas id="bg-canvas"></canvas>
-
-  <div class="page-content">
-    <div class="logo">
-      <svg xmlns="http://www.w3.org/2000/svg"
-           viewBox="0 0 1238.26 721.13"
-           preserveAspectRatio="xMidYMid meet">
-        <!-- shadow layer -->
-        <g transform="translate(-383.735099,629.980462) scale(0.100000,-0.100000)"
-           fill="#FF6B50" stroke="none" opacity="0.25">
-          <path d="M8933 6285 c-18 -8 -63 -38 -100 -68 -85 -69 -148 -102 -218 -117
+  <div class="logo">
+    <svg xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 1238.26 721.13"
+         preserveAspectRatio="xMidYMid meet">
+      <!-- shadow layer -->
+      <g transform="translate(-383.735099,629.980462) scale(0.100000,-0.100000)"
+         fill="#FF6B50" stroke="none" opacity="0.25">
+        <path d="M8933 6285 c-18 -8 -63 -38 -100 -68 -85 -69 -148 -102 -218 -117
 l-54 -11 -58 -38 c-32 -20 -92 -69 -133 -107 -89 -82 -237 -202 -373 -303 -54
 -40 -128 -101 -164 -135 -183 -170 -382 -466 -454 -673 -10 -31 -24 -86 -29
 -121 l-11 -64 15 -56 c8 -32 17 -78 21 -103 l7 -45 -12 -43 c-6 -24 -22 -54
@@ -222,11 +192,11 @@ c-171 22 -337 51 -610 105 -93 19 -219 42 -280 51 l-110 17 -155 -1 -155 0
 l44 79 47 42 47 42 47 13 47 14 61 -11 c86 -15 177 -53 357 -150 217 -117 333
 -155 367 -121 7 7 12 24 12 38 l0 27 -38 59 c-49 74 -207 250 -307 340 -95 85
 -156 129 -220 160 l-50 24 -55 0 c-30 -1 -70 -7 -87 -15z"/>
-        </g>
-        <!-- main layer -->
-        <g transform="translate(375,187) translate(-383.735099,629.980462) scale(0.100000,-0.100000)"
-           fill="#FF6B50" stroke="none">
-          <path d="M8933 6285 c-18 -8 -63 -38 -100 -68 -85 -69 -148 -102 -218 -117
+      </g>
+      <!-- main layer -->
+      <g transform="translate(375,187) translate(-383.735099,629.980462) scale(0.100000,-0.100000)"
+         fill="#FF6B50" stroke="none">
+        <path d="M8933 6285 c-18 -8 -63 -38 -100 -68 -85 -69 -148 -102 -218 -117
 l-54 -11 -58 -38 c-32 -20 -92 -69 -133 -107 -89 -82 -237 -202 -373 -303 -54
 -40 -128 -101 -164 -135 -183 -170 -382 -466 -454 -673 -10 -31 -24 -86 -29
 -121 l-11 -64 15 -56 c8 -32 17 -78 21 -103 l7 -45 -12 -43 c-6 -24 -22 -54
@@ -271,537 +241,34 @@ c-171 22 -337 51 -610 105 -93 19 -219 42 -280 51 l-110 17 -155 -1 -155 0
 l44 79 47 42 47 42 47 13 47 14 61 -11 c86 -15 177 -53 357 -150 217 -117 333
 -155 367 -121 7 7 12 24 12 38 l0 27 -38 59 c-49 74 -207 250 -307 340 -95 85
 -156 129 -220 160 l-50 24 -55 0 c-30 -1 -70 -7 -87 -15z"/>
-        </g>
-      </svg>
-    </div>
+      </g>
+    </svg>
+  </div>
 
-    <h1 class="name">annevailable</h1>
+  <h1 class="name">annevailable</h1>
 
-    <button class="instagram" id="ig-btn">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-           stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-        <circle cx="12" cy="12" r="4"/>
-        <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
-      </svg>
-      @anne__vailable
-    </button>
+  <button class="instagram" id="ig-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+         stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+      <circle cx="12" cy="12" r="4"/>
+      <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+    </svg>
+    @anne__vailable
+  </button>
 
-    <div id="ig-popup">
-      <div id="ig-popup-box">
-        <p>Instahandle musst du dir noch saven&nbsp;;)<br>Happy birthday ♡</p>
-        <button id="ig-popup-close">ok</button>
-      </div>
+  <div id="ig-popup">
+    <div id="ig-popup-box">
+      <p>Instahandle musst du dir noch saven&nbsp;;)<br>Happy birthday ♡</p>
+      <button id="ig-popup-close">ok</button>
     </div>
   </div>
 
   <script>
-  (function () {
-    'use strict';
-
-    // ── Config ────────────────────────────────────────────────────────────────
-    const SIM_RES          = 128;   // velocity / pressure grid
-    const DYE_RES          = 512;   // dye (visual) grid — higher = crisper wisps
-    const PRESSURE_ITER    = 20;    // Jacobi pressure iterations
-    const VEL_DISSIPATION  = 0.9992; // high inertia — flows long after input
-    const DYE_DISSIPATION  = 0.989;  // slightly slower fade so ambient flow stays visible
-    const CURL_STRENGTH    = 1;      // minimal turbulence — thick fluid barely swirls
-    const SPLAT_RADIUS     = 0.0006; // trail width
-    const FORCE_SCALE      = 10;     // heavy, sluggish response to input
-
-    // ── WebGL2 setup ──────────────────────────────────────────────────────────
-    const canvas = document.getElementById('bg-canvas');
-    const gl = canvas.getContext('webgl2', { alpha: false, preserveDrawingBuffer: false });
-    if (!gl) return; // graceful: page still shows, just no effect
-
-    gl.getExtension('EXT_color_buffer_float');
-
-    let W = canvas.width  = window.innerWidth;
-    let H = canvas.height = window.innerHeight;
-
-    // ── Shader helpers ────────────────────────────────────────────────────────
-    function compile(type, src) {
-      const s = gl.createShader(type);
-      gl.shaderSource(s, src);
-      gl.compileShader(s);
-      if (!gl.getShaderParameter(s, gl.COMPILE_STATUS))
-        console.error('Shader error:', gl.getShaderInfoLog(s));
-      return s;
-    }
-
-    function program(vertSrc, fragSrc) {
-      const p = gl.createProgram();
-      gl.attachShader(p, compile(gl.VERTEX_SHADER, vertSrc));
-      gl.attachShader(p, compile(gl.FRAGMENT_SHADER, fragSrc));
-      gl.linkProgram(p);
-      if (!gl.getProgramParameter(p, gl.LINK_STATUS))
-        console.error('Program link error:', gl.getProgramInfoLog(p));
-      // Cache uniform locations
-      const locs = {};
-      return new Proxy(p, {
-        get(target, key) {
-          if (key === 'raw') return target;
-          if (typeof target[key] === 'function') return target[key].bind(target);
-          if (!(key in locs)) locs[key] = gl.getUniformLocation(target, key);
-          return locs[key];
-        }
-      });
-    }
-
-    // ── Full-screen quad ──────────────────────────────────────────────────────
-    const quadVAO = gl.createVertexArray();
-    gl.bindVertexArray(quadVAO);
-    const quadBuf = gl.createBuffer();
-    gl.bindBuffer(gl.ARRAY_BUFFER, quadBuf);
-    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
-    gl.enableVertexAttribArray(0);
-    gl.vertexAttribPointer(0, 2, gl.FLOAT, false, 0, 0);
-    gl.bindVertexArray(null);
-
-    function blit(target) {
-      if (target) {
-        gl.bindFramebuffer(gl.FRAMEBUFFER, target.fbo);
-        gl.viewport(0, 0, target.w, target.h);
-      } else {
-        gl.bindFramebuffer(gl.FRAMEBUFFER, null);
-        gl.viewport(0, 0, W, H);
-      }
-      gl.bindVertexArray(quadVAO);
-      gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
-      gl.bindVertexArray(null);
-    }
-
-    // ── FBO helpers ───────────────────────────────────────────────────────────
-    function makeFBO(w, h, iFmt, fmt, type, filter) {
-      gl.activeTexture(gl.TEXTURE0);
-      const tex = gl.createTexture();
-      gl.bindTexture(gl.TEXTURE_2D, tex);
-      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, filter);
-      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, filter);
-      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
-      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
-      gl.texImage2D(gl.TEXTURE_2D, 0, iFmt, w, h, 0, fmt, type, null);
-      const fbo = gl.createFramebuffer();
-      gl.bindFramebuffer(gl.FRAMEBUFFER, fbo);
-      gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, tex, 0);
-      gl.viewport(0, 0, w, h); gl.clear(gl.COLOR_BUFFER_BIT);
-      return { tex, fbo, w, h };
-    }
-
-    function makeDouble(w, h, iFmt, fmt, type, filter) {
-      let r = makeFBO(w, h, iFmt, fmt, type, filter);
-      let wr = makeFBO(w, h, iFmt, fmt, type, filter);
-      return {
-        get read()  { return r;  },
-        get write() { return wr; },
-        swap() { [r, wr] = [wr, r]; }
-      };
-    }
-
-    function tex(fbo, unit) {
-      gl.activeTexture(gl.TEXTURE0 + unit);
-      gl.bindTexture(gl.TEXTURE_2D, fbo.tex);
-      return unit;
-    }
-
-    // ── Shared vertex shader ──────────────────────────────────────────────────
-    const VERT = `#version 300 es
-layout(location=0) in vec2 aPos;
-out vec2 vUv;
-uniform vec2 texelSize;
-void main(){
-  vUv = aPos * .5 + .5;
-  gl_Position = vec4(aPos, 0., 1.);
-}`;
-
-    // ── Fragment shaders ──────────────────────────────────────────────────────
-    // Velocity stored in UV/sec — back-trace directly, no texelSize scaling needed
-    const ADVECT = `#version 300 es
-precision highp float;
-in vec2 vUv; out vec4 o;
-uniform sampler2D uVel, uSrc;
-uniform float dt, dissipation;
-void main(){
-  vec2 vel = texture(uVel, vUv).xy;
-  vec2 coord = vUv - dt * vel;
-  o = dissipation * texture(uSrc, coord);
-}`;
-
-    const CURL = `#version 300 es
-precision highp float;
-in vec2 vUv; out vec4 o;
-uniform sampler2D uVel;
-uniform vec2 texelSize;
-void main(){
-  float L = texture(uVel, vUv - vec2(texelSize.x,0)).y;
-  float R = texture(uVel, vUv + vec2(texelSize.x,0)).y;
-  float T = texture(uVel, vUv + vec2(0,texelSize.y)).x;
-  float B = texture(uVel, vUv - vec2(0,texelSize.y)).x;
-  o = vec4((R-L-T+B) * .5, 0., 0., 1.);
-}`;
-
-    const VORTICITY = `#version 300 es
-precision highp float;
-in vec2 vUv; out vec4 o;
-uniform sampler2D uVel, uCurl;
-uniform vec2 texelSize;
-uniform float curl, dt;
-void main(){
-  float L = texture(uCurl, vUv - vec2(texelSize.x,0)).x;
-  float R = texture(uCurl, vUv + vec2(texelSize.x,0)).x;
-  float T = texture(uCurl, vUv + vec2(0,texelSize.y)).x;
-  float B = texture(uCurl, vUv - vec2(0,texelSize.y)).x;
-  float C = texture(uCurl, vUv).x;
-  vec2 f  = .5 * vec2(abs(T)-abs(B), abs(R)-abs(L));
-  f /= length(f) + 1e-5;
-  f *= curl * C;
-  f.y *= -1.;
-  o = vec4(texture(uVel, vUv).xy + f * dt, 0., 1.);
-}`;
-
-    const DIVERGENCE = `#version 300 es
-precision highp float;
-in vec2 vUv; out vec4 o;
-uniform sampler2D uVel;
-uniform vec2 texelSize;
-void main(){
-  float L = texture(uVel, vUv - vec2(texelSize.x,0)).x;
-  float R = texture(uVel, vUv + vec2(texelSize.x,0)).x;
-  float T = texture(uVel, vUv + vec2(0,texelSize.y)).y;
-  float B = texture(uVel, vUv - vec2(0,texelSize.y)).y;
-  o = vec4(.5*(R-L+T-B), 0., 0., 1.);
-}`;
-
-    const PRESSURE = `#version 300 es
-precision highp float;
-in vec2 vUv; out vec4 o;
-uniform sampler2D uPres, uDiv;
-uniform vec2 texelSize;
-void main(){
-  float L = texture(uPres, vUv - vec2(texelSize.x,0)).x;
-  float R = texture(uPres, vUv + vec2(texelSize.x,0)).x;
-  float T = texture(uPres, vUv + vec2(0,texelSize.y)).x;
-  float B = texture(uPres, vUv - vec2(0,texelSize.y)).x;
-  o = vec4((L+R+T+B - texture(uDiv,vUv).x) * .25, 0.,0.,1.);
-}`;
-
-    const GRAD_SUBTRACT = `#version 300 es
-precision highp float;
-in vec2 vUv; out vec4 o;
-uniform sampler2D uPres, uVel;
-uniform vec2 texelSize;
-void main(){
-  float L = texture(uPres, vUv - vec2(texelSize.x,0)).x;
-  float R = texture(uPres, vUv + vec2(texelSize.x,0)).x;
-  float T = texture(uPres, vUv + vec2(0,texelSize.y)).x;
-  float B = texture(uPres, vUv - vec2(0,texelSize.y)).x;
-  vec2 v = texture(uVel, vUv).xy - vec2(R-L, T-B) * .5;
-  o = vec4(v, 0., 1.);
-}`;
-
-    const SPLAT = `#version 300 es
-precision highp float;
-in vec2 vUv; out vec4 o;
-uniform sampler2D uTarget;
-uniform vec2 point;
-uniform vec3 color;
-uniform float radius, aspect;
-void main(){
-  vec2 p = vUv - point;
-  p.x *= aspect;
-  float splat = exp(-dot(p,p) / radius);
-  o = vec4(texture(uTarget, vUv).rgb + splat * color, 1.);
-}`;
-
-    // Display: still dark water — barely visible at rest, ripples catch light
-    const DISPLAY = `#version 300 es
-precision highp float;
-in vec2 vUv; out vec4 o;
-uniform sampler2D uDye;
-void main(){
-  vec3 dye  = max(texture(uDye, vUv).rgb, vec3(0.));
-  float lum = dot(dye, vec3(0.333));
-  float t   = 1. - exp(-lum * 2.5);
-  // Left side: coral #FF6B50 → right side: teal #0ABAB5
-  float cx = smoothstep(0.35, 0.50, vUv.x);
-  vec3 water  = mix(vec3(0.050, 0.030, 0.022), vec3(0.036, 0.044, 0.043), cx);
-  vec3 ripple = mix(vec3(1.0,  0.420, 0.314),  vec3(0.039, 0.729, 0.710), cx);
-  o = vec4(mix(water, ripple, t * 0.65), 1.);
-}`;
-
-    // ── Compile programs ──────────────────────────────────────────────────────
-    const pAdvect   = program(VERT, ADVECT);
-    const pCurl     = program(VERT, CURL);
-    const pVort     = program(VERT, VORTICITY);
-    const pDiv      = program(VERT, DIVERGENCE);
-    const pPres     = program(VERT, PRESSURE);
-    const pGrad     = program(VERT, GRAD_SUBTRACT);
-    const pSplat    = program(VERT, SPLAT);
-    const pDisplay  = program(VERT, DISPLAY);
-
-    // ── Create framebuffers ───────────────────────────────────────────────────
-    const aspect = W / H;
-    const simW = SIM_RES, simH = Math.round(SIM_RES / aspect);
-    const dyeW = DYE_RES, dyeH = Math.round(DYE_RES / aspect);
-
-    let velocity = makeDouble(simW, simH, gl.RG16F,   gl.RG,   gl.HALF_FLOAT, gl.LINEAR);
-    let dye      = makeDouble(dyeW, dyeH, gl.RGBA16F, gl.RGBA, gl.HALF_FLOAT, gl.LINEAR);
-    let pressure = makeDouble(simW, simH, gl.R16F,    gl.RED,  gl.HALF_FLOAT, gl.NEAREST);
-    const curlFBO = makeFBO(simW, simH, gl.R16F,    gl.RED,  gl.HALF_FLOAT, gl.NEAREST);
-    const divFBO  = makeFBO(simW, simH, gl.R16F,    gl.RED,  gl.HALF_FLOAT, gl.NEAREST);
-
-    const simTs = [1/simW, 1/simH];
-    const dyeTs = [1/dyeW, 1/dyeH];
-
-    // ── Sim step ──────────────────────────────────────────────────────────────
-    function step(dt) {
-      gl.disable(gl.BLEND);
-
-      // Curl
-      gl.useProgram(pCurl.raw);
-      gl.uniform1i(pCurl.uVel, tex(velocity.read, 0));
-      gl.uniform2fv(pCurl.texelSize, simTs);
-      blit(curlFBO);
-
-      // Vorticity confinement
-      gl.useProgram(pVort.raw);
-      gl.uniform1i(pVort.uVel,  tex(velocity.read, 0));
-      gl.uniform1i(pVort.uCurl, tex(curlFBO, 1));
-      gl.uniform2fv(pVort.texelSize, simTs);
-      gl.uniform1f(pVort.curl, CURL_STRENGTH);
-      gl.uniform1f(pVort.dt, dt);
-      blit(velocity.write); velocity.swap();
-
-      // Advect velocity
-      gl.useProgram(pAdvect.raw);
-      gl.uniform1i(pAdvect.uVel,  tex(velocity.read, 0));
-      gl.uniform1i(pAdvect.uSrc,  tex(velocity.read, 0));
-      gl.uniform1f(pAdvect.dt, dt);
-      gl.uniform1f(pAdvect.dissipation, VEL_DISSIPATION);
-      blit(velocity.write); velocity.swap();
-
-      // Divergence
-      gl.useProgram(pDiv.raw);
-      gl.uniform1i(pDiv.uVel, tex(velocity.read, 0));
-      gl.uniform2fv(pDiv.texelSize, simTs);
-      blit(divFBO);
-
-      // Pressure solve (Jacobi)
-      for (let i = 0; i < PRESSURE_ITER; i++) {
-        gl.useProgram(pPres.raw);
-        gl.uniform1i(pPres.uPres, tex(pressure.read, 0));
-        gl.uniform1i(pPres.uDiv,  tex(divFBO, 1));
-        gl.uniform2fv(pPres.texelSize, simTs);
-        blit(pressure.write); pressure.swap();
-      }
-
-      // Gradient subtract → divergence-free velocity
-      gl.useProgram(pGrad.raw);
-      gl.uniform1i(pGrad.uPres, tex(pressure.read, 0));
-      gl.uniform1i(pGrad.uVel,  tex(velocity.read, 1));
-      gl.uniform2fv(pGrad.texelSize, simTs);
-      blit(velocity.write); velocity.swap();
-
-      // Advect dye
-      gl.useProgram(pAdvect.raw);
-      gl.uniform1i(pAdvect.uVel,  tex(velocity.read, 0));
-      gl.uniform1i(pAdvect.uSrc,  tex(dye.read, 1));
-      gl.uniform1f(pAdvect.dt, dt);
-      gl.uniform1f(pAdvect.dissipation, DYE_DISSIPATION);
-      blit(dye.write); dye.swap();
-    }
-
-    // ── Splat helper ──────────────────────────────────────────────────────────
-    function splat(x, y, vx, vy, r, g, b) {
-      const u   = x / W;
-      const v   = 1.0 - y / H;   // flip Y: WebGL UV origin is bottom-left
-      const asp = W / H;
-
-      gl.useProgram(pSplat.raw);
-      gl.uniform1f(pSplat.aspect, asp);
-
-      // velocity splat
-      gl.uniform1i(pSplat.uTarget, tex(velocity.read, 0));
-      gl.uniform2f(pSplat.point, u, v);
-      gl.uniform3f(pSplat.color, vx / W * FORCE_SCALE, -vy / H * FORCE_SCALE, 0);
-      gl.uniform1f(pSplat.radius, SPLAT_RADIUS);
-      blit(velocity.write); velocity.swap();
-
-      // dye splat — slightly larger so you see it
-      gl.uniform1i(pSplat.uTarget, tex(dye.read, 0));
-      gl.uniform2f(pSplat.point, u, v);
-      gl.uniform3f(pSplat.color, r, g, b);
-      gl.uniform1f(pSplat.radius, SPLAT_RADIUS * 1.5);
-      blit(dye.write); dye.swap();
-    }
-
-    // ── Activation state ─────────────────────────────────────────────────────
-    let active = false;
-
-    // Clear all dye and velocity back to zero
-    function clearFluid() {
-      gl.disable(gl.BLEND);
-      gl.useProgram(pSplat.raw); // just need any program — blit with clear color
-      [velocity.read, velocity.write, dye.read, dye.write,
-       pressure.read, pressure.write].forEach(f => {
-        gl.bindFramebuffer(gl.FRAMEBUFFER, f.fbo);
-        gl.viewport(0, 0, f.w, f.h);
-        gl.clearColor(0, 0, 0, 1);
-        gl.clear(gl.COLOR_BUFFER_BIT);
-      });
-    }
-
-    // Cubic bezier position
-    function cbz(p0, p1, p2, p3, t) {
-      const u = 1 - t;
-      return {
-        x: u*u*u*p0.x + 3*u*u*t*p1.x + 3*u*t*t*p2.x + t*t*t*p3.x,
-        y: u*u*u*p0.y + 3*u*u*t*p1.y + 3*u*t*t*p2.y + t*t*t*p3.y
-      };
-    }
-
-    // ── Strike animation ──────────────────────────────────────────────────────
-    function triggerStrike() {
-      const nameEl = document.querySelector('.name');
-      const r = nameEl.getBoundingClientRect();
-      const cy = (r.top + r.bottom) / 2;
-      const p0 = { x: -W * 0.04,               y: cy + 18 };
-      const p1 = { x: r.left + r.width * 0.22, y: cy - 80 };
-      const p2 = { x: r.left + r.width * 0.72, y: cy + 80 };
-      const p3 = { x: W * 1.04,                y: cy - 14 };
-      const duration = 900;
-      const t0 = performance.now();
-      let px = p0.x, py = p0.y;
-      function strikeFrame(now) {
-        const raw = Math.min((now - t0) / duration, 1.0);
-        const t   = 1 - Math.pow(1 - raw, 2);
-        const pos = cbz(p0, p1, p2, p3, t);
-        // superimpose a gentle wave on the bezier path
-        pos.y += 10 * Math.sin(raw * Math.PI * 6);
-        const dx = pos.x - px, dy = pos.y - py;
-        if (Math.hypot(dx, dy) > 0.2) {
-          splat(pos.x, pos.y, dx * 5, dy * 5, 1.4, 1.4, 1.4);
-          splat(px + dx * 0.5, py + dy * 0.5, dx * 2, dy * 2, 0.5, 0.5, 0.5);
-        }
-        px = pos.x; py = pos.y;
-        if (raw < 1.0) requestAnimationFrame(strikeFrame);
-      }
-      requestAnimationFrame(strikeFrame);
-    }
-
-    // ── Instagram popup ───────────────────────────────────────────────────────
     const igPopup = document.getElementById('ig-popup');
     document.getElementById('ig-btn').addEventListener('click', () => igPopup.classList.add('open'));
-    document.getElementById('ig-popup-close').addEventListener('click', () => {
-      igPopup.classList.remove('open');
-      if (active) triggerStrike();
-    });
-    igPopup.addEventListener('click', e => {
-      if (e.target === igPopup) {
-        igPopup.classList.remove('open');
-        if (active) triggerStrike();
-      }
-    });
-
-    // ── Logo click: toggle on/off ─────────────────────────────────────────────
-    document.querySelector('.logo').style.cursor = 'pointer';
-    document.querySelector('.logo').addEventListener('click', () => {
-      active = !active;
-      if (active) {
-        triggerStrike();
-      } else {
-        clearFluid();
-      }
-    });
-
-    // ── Display ───────────────────────────────────────────────────────────────
-    function renderBlack() {
-      gl.bindFramebuffer(gl.FRAMEBUFFER, null);
-      gl.viewport(0, 0, W, H);
-      gl.clearColor(0.055, 0.055, 0.055, 1); // matches --bg
-      gl.clear(gl.COLOR_BUFFER_BIT);
-    }
-
-    function render() {
-      gl.useProgram(pDisplay.raw);
-      gl.uniform1i(pDisplay.uDye, tex(dye.read, 0));
-      blit(null);
-    }
-
-    // ── Ambient trickle — keeps a gentle current alive when active ────────────
-    let lastAmbient = 0;
-    function ambientTick(now) {
-      if (now - lastAmbient < 1600) return;
-      lastAmbient = now;
-      // Two tiny splats near the text, slow drifting angles
-      const nameEl = document.querySelector('.name');
-      const r = nameEl.getBoundingClientRect();
-      for (let i = 0; i < 2; i++) {
-        const x = r.left + Math.random() * r.width;
-        const y = (r.top + r.bottom) / 2 + (Math.random() - 0.5) * r.height * 1.5;
-        const angle = Math.random() * Math.PI * 2;
-        const f = 1.2 + Math.random() * 1.4;
-        splat(x, y, Math.cos(angle) * f, Math.sin(angle) * f, 0.12, 0.12, 0.12);
-      }
-    }
-
-    // ── Main loop ─────────────────────────────────────────────────────────────
-    let lastT = performance.now();
-    function loop() {
-      const now = performance.now();
-      const dt  = Math.min((now - lastT) / 1000, 0.017);
-      lastT = now;
-      if (active) {
-        ambientTick(now);
-        step(dt);
-        render();
-      } else {
-        renderBlack();
-      }
-      requestAnimationFrame(loop);
-    }
-    requestAnimationFrame(loop);
-
-    // ── Pointer tracking (only when active) ──────────────────────────────────
-    let px = 0, py = 0, moved = false;
-
-    function onMove(x, y) {
-      if (!active) return;
-      if (!moved) { px = x; py = y; moved = true; return; }
-      const dx = x - px, dy = y - py;
-      const dist = Math.hypot(dx, dy);
-      if (dist > 0.5) {
-        const bright = Math.min(0.4 + dist / (W * 0.15), 1.5);
-        splat(x, y, dx, dy, bright, bright, bright * 1.06);
-      }
-      px = x; py = y;
-    }
-
-    document.addEventListener('mousemove', e => onMove(e.clientX, e.clientY));
-
-    document.addEventListener('touchmove', e => {
-      if (!active) return;
-      e.preventDefault();
-      onMove(e.touches[0].clientX, e.touches[0].clientY);
-    }, { passive: false });
-
-    document.addEventListener('touchstart', e => {
-      if (!active) return;
-      px = e.touches[0].clientX;
-      py = e.touches[0].clientY;
-      moved = true;
-    }, { passive: true });
-
-    document.addEventListener('touchend', () => { moved = false; });
-
-    // ── Resize ────────────────────────────────────────────────────────────────
-    window.addEventListener('resize', () => {
-      W = canvas.width  = window.innerWidth;
-      H = canvas.height = window.innerHeight;
-    });
-
-  })();
+    document.getElementById('ig-popup-close').addEventListener('click', () => igPopup.classList.remove('open'));
+    igPopup.addEventListener('click', e => { if (e.target === igPopup) igPopup.classList.remove('open'); });
   </script>
-
 </body>
 </html>
